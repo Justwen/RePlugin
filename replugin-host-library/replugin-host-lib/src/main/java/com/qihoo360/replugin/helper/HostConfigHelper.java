@@ -76,91 +76,94 @@ public class HostConfigHelper {
         try {
             HOST_CONFIG_CLASS = ReflectUtils.getClass(HOST_CONFIG_FILE_PATH + HOST_CONFIG_FILE_NAME);
         } catch (ClassNotFoundException e) {
-            // Ignore, Just use default value
+            e.printStackTrace();
         }
 
-        try {
-            PERSISTENT_ENABLE = readField("PERSISTENT_ENABLE");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+        if (HOST_CONFIG_CLASS != null) {
 
-        try {
-            PERSISTENT_NAME = readField("PERSISTENT_NAME");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                PERSISTENT_ENABLE = readField("PERSISTENT_ENABLE");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ACTIVITY_PIT_USE_APPCOMPAT = readField("ACTIVITY_PIT_USE_APPCOMPAT");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                PERSISTENT_NAME = readField("PERSISTENT_NAME");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ACTIVITY_PIT_COUNT_TS_STANDARD = readField("ACTIVITY_PIT_COUNT_TS_STANDARD");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                ACTIVITY_PIT_USE_APPCOMPAT = readField("ACTIVITY_PIT_USE_APPCOMPAT");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ACTIVITY_PIT_COUNT_TS_SINGLE_TOP = readField("ACTIVITY_PIT_COUNT_TS_SINGLE_TOP");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                ACTIVITY_PIT_COUNT_TS_STANDARD = readField("ACTIVITY_PIT_COUNT_TS_STANDARD");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ACTIVITY_PIT_COUNT_TS_SINGLE_TASK = readField("ACTIVITY_PIT_COUNT_TS_SINGLE_TASK");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                ACTIVITY_PIT_COUNT_TS_SINGLE_TOP = readField("ACTIVITY_PIT_COUNT_TS_SINGLE_TOP");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ACTIVITY_PIT_COUNT_TS_SINGLE_INSTANCE = readField("ACTIVITY_PIT_COUNT_TS_SINGLE_INSTANCE");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                ACTIVITY_PIT_COUNT_TS_SINGLE_TASK = readField("ACTIVITY_PIT_COUNT_TS_SINGLE_TASK");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ACTIVITY_PIT_COUNT_NTS_STANDARD = readField("ACTIVITY_PIT_COUNT_NTS_STANDARD");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                ACTIVITY_PIT_COUNT_TS_SINGLE_INSTANCE = readField("ACTIVITY_PIT_COUNT_TS_SINGLE_INSTANCE");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ACTIVITY_PIT_COUNT_NTS_SINGLE_TOP = readField("ACTIVITY_PIT_COUNT_NTS_SINGLE_TOP");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                ACTIVITY_PIT_COUNT_NTS_STANDARD = readField("ACTIVITY_PIT_COUNT_NTS_STANDARD");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ACTIVITY_PIT_COUNT_NTS_SINGLE_TASK = readField("ACTIVITY_PIT_COUNT_NTS_SINGLE_TASK");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                ACTIVITY_PIT_COUNT_NTS_SINGLE_TOP = readField("ACTIVITY_PIT_COUNT_NTS_SINGLE_TOP");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ACTIVITY_PIT_COUNT_NTS_SINGLE_INSTANCE = readField("ACTIVITY_PIT_COUNT_NTS_SINGLE_INSTANCE");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                ACTIVITY_PIT_COUNT_NTS_SINGLE_TASK = readField("ACTIVITY_PIT_COUNT_NTS_SINGLE_TASK");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ACTIVITY_PIT_COUNT_TASK = readField("ACTIVITY_PIT_COUNT_TASK");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                ACTIVITY_PIT_COUNT_NTS_SINGLE_INSTANCE = readField("ACTIVITY_PIT_COUNT_NTS_SINGLE_INSTANCE");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ADAPTER_COMPATIBLE_VERSION = readField("ADAPTER_COMPATIBLE_VERSION");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
-        }
+            try {
+                ACTIVITY_PIT_COUNT_TASK = readField("ACTIVITY_PIT_COUNT_TASK");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
 
-        try {
-            ADAPTER_CURRENT_VERSION = readField("ADAPTER_CURRENT_VERSION");
-        } catch (NoSuchFieldException e) {
-            // Ignore, Just use default value
+            try {
+                ADAPTER_COMPATIBLE_VERSION = readField("ADAPTER_COMPATIBLE_VERSION");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
+
+            try {
+                ADAPTER_CURRENT_VERSION = readField("ADAPTER_CURRENT_VERSION");
+            } catch (NoSuchFieldException e) {
+                // Ignore, Just use default value
+            }
         }
     }
 

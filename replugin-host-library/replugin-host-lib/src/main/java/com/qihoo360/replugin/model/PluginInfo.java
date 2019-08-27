@@ -131,7 +131,7 @@ public class PluginInfo implements Serializable, Parcelable, Cloneable {
 
     // 若插件需要同版本覆盖安装更新，则会有此值
     private PluginInfo mPendingCover;
-    private boolean mIsPendingCover;    // 若当前为“新的PluginInfo”且为“同版本覆盖”，则为了能区分路径，则需要将此字段同步到Json文件中
+    private Boolean mIsPendingCover;    // 若当前为“新的PluginInfo”且为“同版本覆盖”，则为了能区分路径，则需要将此字段同步到Json文件中
 
     // 若当前为“新的PluginInfo”，则其“父Info”是什么？
     // 通常当前这个Info会包裹在“mPendingUpdate/mPendingDelete/mPendingCover”内
